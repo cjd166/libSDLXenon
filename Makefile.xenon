@@ -54,7 +54,7 @@ clean:
 	rm -f $(TARGET) $(OBJECTS)
 
 install: all
-	rm -f $(DEVKITXENON)/usr/include/SDL/ -R
+	rm -f -r $(DEVKITXENON)/usr/include/SDL/
 	mkdir $(DEVKITXENON)/usr/include/SDL/
 	cp -r include/* $(DEVKITXENON)/usr/include/SDL/ 
 	cp $(TARGET) $(DEVKITXENON)/usr/lib/$(TARGET)
